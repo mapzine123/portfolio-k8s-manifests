@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kgat-frontend
-  namespace: kgat  # 네임스페이스 추가
+  namespace: kgat
   labels:
     app: kgat-frontend
 spec:
@@ -16,6 +16,8 @@ spec:
       labels:
         app: kgat-frontend
     spec:
+      imagePullSecrets:
+      - name: ecr-secret  # 이 부분 추가
       containers:
       - name: kgat-frontend
         image: 676206900599.dkr.ecr.ap-northeast-2.amazonaws.com/kgat-frontend:7a4e79e9d3ee9f46e3fafa94b976e103cc2afa95
