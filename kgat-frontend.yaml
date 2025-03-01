@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: kgat-frontend
-        image: 676206900599.dkr.ecr.ap-northeast-2.amazonaws.com/kgat-frontend:latest
+        image: 676206900599.dkr.ecr.ap-northeast-2.amazonaws.com/kgat-frontend:7a4e79e9d3ee9f46e3fafa94b976e103cc2afa95
         ports:
         - containerPort: 80
 ---
