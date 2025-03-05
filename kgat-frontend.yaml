@@ -28,7 +28,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: kgat-frontend-svc
-  namespace: kgat
+  namespace: kgat-frontend
 spec:
   selector:
     app: kgat-frontend
