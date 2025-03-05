@@ -33,6 +33,8 @@ spec:
   selector:
     app: kgat-frontend
   ports:
-  - port: 80
-    targetPort: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80
   type: ClusterIP
+
