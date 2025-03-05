@@ -1,9 +1,8 @@
-# kgat-frontend.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kgat-frontend
-  namespace: kgat
+  namespace: kgat-frontend
   labels:
     app: kgat-frontend
 spec:
@@ -17,7 +16,7 @@ spec:
         app: kgat-frontend
     spec:
       imagePullSecrets:
-      - name: ecr-secret  # 이 부분 추가
+      - name: ecr-secret
       containers:
       - name: kgat-frontend
         image: 676206900599.dkr.ecr.ap-northeast-2.amazonaws.com/kgat-frontend:7af5855621bf396a39c4ed98266af400a277c2d6
@@ -37,4 +36,3 @@ spec:
       port: 80
       targetPort: 80
   type: ClusterIP
-
