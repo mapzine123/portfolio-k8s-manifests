@@ -20,7 +20,7 @@ spec:
       - name: ecr-secret  # 이 부분 추가
       containers:
       - name: kgat-frontend
-        image: 676206900599.dkr.ecr.ap-northeast-2.amazonaws.com/kgat-frontend:f266932b317d27775d7cb3eeaa6e952379a623f9
+        image: 676206900599.dkr.ecr.ap-northeast-2.amazonaws.com/kgat-frontend:7af5855621bf396a39c4ed98266af400a277c2d6
         ports:
         - containerPort: 80
 ---
