@@ -25,6 +25,7 @@ metadata:
 spec:
   selector:
     app: kgat-backend
+     namespace: kgat-backend
   ports:
     - protocol: TCP
       port: 80
