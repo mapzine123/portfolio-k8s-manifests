@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kgat-backend
+  namespace: kgat-backend
+  labels:
+    app: kgat-backend
 spec:
   replicas: 2
   selector:
@@ -12,11 +15,13 @@ spec:
       labels:
         app: kgat-backend
     spec:
+      imagePullSecrets:
+      - name: ecr-secret
       containers:
         - name: kgat-backend
-          image: kgat-backend-image:latest
+          image: 676206900599.dkr.ecr.ap-northeast-2.amazonaws.com/kgat-backend:f0cd6c8c5d6ca63d8f1d95831361c732582c032a
           ports:
-            - containerPort: 80
+            - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -28,7 +33,6 @@ spec:
     app: kgat-backend
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
-  clusterIP: None
-
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
