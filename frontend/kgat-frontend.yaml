@@ -19,7 +19,7 @@ spec:
       - name: ecr-secret
       containers:
       - name: kgat-frontend
-        image: 676206900599.dkr.ecr.ap-northeast-2.amazonaws.com/kgat-frontend:9ba5144c9f5af72b7677f073561326a1b0a83e7a
+        image: 676206900599.dkr.ecr.ap-northeast-2.amazonaws.com/kgat-frontend:507153b6694dc5999856a790af98f05feb053e82
         ports:
         - containerPort: 80
 ---
