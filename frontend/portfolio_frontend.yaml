@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: portfolio-frontend
-        image: <your-ecr-repository>/portfolio_frontend:latest
+        image: 676206900599.dkr.ecr.ap-northeast-2.amazonaws.com/portfolio_frontend:21812a040bbe2f9797c5092f5916980e67f98f5c
         ports:
         - containerPort: 80
 
